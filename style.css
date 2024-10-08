@@ -13,6 +13,14 @@ body {
   font-family: "source sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
 }
 
+/* PC用カルーセル設定 */
+.carousel {
+  margin: 0 20px;
+}
+.carouselImg {
+  width: 100%;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -551,6 +559,11 @@ footer {
 
 /* 画面幅が767px以下のとき */
 @media screen and (max-width: 767px) {/* スマートフォン用のスタイルを指定する */
+  /* スマホ用カルーセル設定 */
+  .carousel {
+    margin: 0;
+  }
+
   #nav-pc {
     display: none; /* PC用ナビゲーション非表示 */
   }
@@ -559,9 +572,11 @@ footer {
   #menu-sp {
     display: block;
     background-color: transparent;
-    float: right;
     padding: 0;
     border: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
   }
 
   /* スマホ用ナビゲーションの表示切替

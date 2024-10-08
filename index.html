@@ -6,6 +6,9 @@
     <meta name="description" content="SocialTechはEdTech業界のリーディングカンパニーを目指します。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- slickの読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   </head>
   <body>
     <header>
@@ -62,13 +65,25 @@
     </header>
       <main>
         <article>
-          <!-- メインビジュアル -->
-           <section id="main-visual">
-            <div id="main-message">
-              <h1>WORLD PEACE</h1>
-              <p>IT教育で世界平和を実現する</p>
+          <!-- カルーセル -->
+           <section id="carousel-section">
+            <div class="carousel">
+              <div>
+                <a href="index.html">
+                  <img class="carouselImg" src="images/carousel1.png">
+                </a>
+              </div>
+              <div>
+                <a href="mission.html">
+                  <img class="carouselImg" src="images/carousel2.png">
+                </a>
+              </div>
+              <div>
+                <a href="product.html">
+                  <img class="carouselImg" src="images/carousel3.png">
+                </a>
+              </div>
             </div>
-            <img src="images/index/index-main.png" alt="PCの周りに集まる多国籍の仲間たち">
            </section>
            <!-- ミッション -->
            <section id="mission">
@@ -86,7 +101,7 @@
                 <h3>S2DGs</h3>
                 <p>国連が掲げる「Sustainable Development Goals（持続可能な開発目標）」に含まれる17つのグローバル目標のうち、以下の5つの目標の実現をミッションとしてサービスを展開しています。</p>
                 <a href="mission.html">
-                  <img src="images/button-more.png" alt="もっとみる">
+                  <img class="button-more" src="images/button-more.png" alt="もっとみる">
                 </a>
               </div>
             </div>
@@ -134,7 +149,7 @@
               </div>
               <div id="product-more">
                 <a href="product.html">
-                  <img src="images/button-more.png" alt="もっとみる">
+                  <img class="button-more" src="images/button-more.png" alt="もっとみる">
                 </a>
               </div>
             </section>
@@ -273,13 +288,13 @@
                 <section id="contact">
                   <h2 class="index-h2">CONTACT</h2>
                   <h3>お問い合わせ</h3>
-                  <form>
+                  <form id="form">
                     <div>
                       <div class="contact-heading">
                         <label class="contact-label">お名前<span class="contact-span">必須</span></label>
                       </div>
-                      <div>
-                        <input type="text" name="name" placeholder="入力してください" class="contact-textbox">
+                      <div class="contact-form">
+                        <input id="name" type="text" name="name" placeholder="入力してください" class="contact-textbox">
                       </div>
                     </div>
                     <div>
@@ -287,7 +302,7 @@
                         <label class="contact-label">フリガナ<span class="contact-span">必須</span></label>
                       </div>
                       <div>
-                        <input type="text" name="hurigana" placeholder="入力してください" class="contact-textbox">
+                        <input id="furigana" type="text" name="hurigana" placeholder="入力してください" class="contact-textbox">
                       </div>
                     </div>
                     <div>
@@ -295,7 +310,7 @@
                         <label class="contact-label">メールアドレス<span class="contact-span">必須</span></label>
                       </div>
                       <div>
-                        <input type="text" name="email" placeholder="入力してください" class="contact-textbox">
+                        <input id="email" type="text" name="email" placeholder="入力してください" class="contact-textbox">
                       </div>
                     </div>
                     <div>
@@ -303,7 +318,7 @@
                         <label class="contact-label">電話番号</label>
                       </div>
                       <div>
-                        <input type="text" name="tel" placeholder="入力してください" class="contact-textbox">
+                        <input id="tel" type="text" name="tel" placeholder="入力してください" class="contact-textbox">
                       </div>
                     </div>
                     <div>
@@ -311,7 +326,7 @@
                         <label class="contact-label">お問い合わせ内容<span class="contact-span">必須</span></label>
                       </div>
                       <div>
-                        <textarea class="contact-textarea" placeholder="入力してください" name="message"></textarea>
+                        <textarea id="message" class="contact-textarea" placeholder="入力してください" name="message"></textarea>
                       </div>
                     </div>
                     <div>
@@ -369,11 +384,11 @@
                             </dl>
                           </div>
                         </details>
-                        <input type="checkbox" name="agree">
+                        <input id="agree" type="checkbox" name="agree">
                         <span>個人情報の取り扱いについてご同意いただける場合は、チェックをしてください。</span>
                       </div>
                     </div>
-                    <input type="image" src="images/button-submit.png" alt="送信する">
+                    <input id="submit" type="image" src="images/button-submit.png" alt="送信する">
                   </form>
                 </section>
         </article>
@@ -400,5 +415,10 @@
           <a id="copyright">&copy;2021 SocialTech, Inc. All Rights Reserved.</a>
         </div>
       </footer>
+
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <!-- slickの読み込み -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script src="script.js"></script>
   </body>
 </html>
